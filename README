@@ -1,0 +1,12 @@
+CS2010
+Lab Assignment 5
+Zachary Lapointe
+DICTIONARY PART 4
+This program will create a dictionary of words (implemented as CLASS) found in a file.
+To see alternate GetNextWord or the insert function just uncomment them in the main and comment out the alternative.
+The formatting for the alt GetNextWord is horrendous but i'm too lazy to fix it.
+
+To compile, type:	make
+To run type:            ./DICTIONARY
+To input a file type:   ./DICTIONARY < test
+where test is the file with your input
