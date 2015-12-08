@@ -29,19 +29,14 @@ void DICT::insert(WORD w){
 
 
 DICT DICT::operator+(WORD w){
-/*
-  this overloaded addition operator will insert the word w in the dictionary if it's not already there; 
-  otherwise, it will increase its frequency by 1
-*/
+
 	this->insert(w);
 	return *this;
 }
 
 
 void DICT::dump(ostream &o, int numwords) {
-/* 
-  will sort(maybe) the dictionary, and display the contents. o = cout???
-*/
+
 	sort(this->d.begin(), this->d.end());	
 	o << endl;
 	o << "Word                Frequency" << endl;
@@ -62,7 +57,7 @@ void DICT::dump(ostream &o, int numwords) {
 			o << this->d[i].w;
 			if(this->d[i].w.length() <= 20)
 				for(int j=0; j< 20 - this->d[i].w.length(); j++) o << ' '; 
-				//Prints a fixed amount of spaces based off length of word
+			
 			else o << ' ';
 			o << this->d[i].freq << endl;
 		}
@@ -71,9 +66,7 @@ void DICT::dump(ostream &o, int numwords) {
 
 
 ostream &operator<<(ostream &o, DICT &dict){
-/*
-  this is just dump() re-written as an overloaded operator. It dumps the WHOLE dictionary
-*/
+
 	sort(dict.d.begin(), dict.d.end());	
 	o << endl;
 	o << "Word              Frequency" << endl;
@@ -134,7 +127,7 @@ int DICT::LocateWord(WORD w) {
 	for(int i = 0; i < this->d.size(); i++){	//Go through each element of dict
 		if(w == this->d[i].w){	//Compare target word with entry word
 			found = 1;
-			//this->d[i].freq++;
+		
 			loc = i;
 			break;
 		}
