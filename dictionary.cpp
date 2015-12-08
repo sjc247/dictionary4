@@ -4,17 +4,13 @@
 bool operator<(ENTRY i, ENTRY j){return (i.w < j.w);}
 
 DICT::DICT(int size){
-/*
-  Constructor, initailizes vector of entries to size, default is 0
-*/
+
 	this->size = size;
 }
 
 
 void DICT::insert(WORD w){
-/* 
-  adds word to dictionary , if word can't be added returns false else returns true
-*/
+
 	int loc = this->LocateWord(w);
 	if(loc == -1){
 		ENTRY tmp;
@@ -86,9 +82,7 @@ ostream &operator<<(ostream &o, DICT &dict){
 
 
 WORD GetNextWord(int choice){
-/*
-  get next word in a file, lower/upper case letters only nothing else
-*/
+
 	WORD w;
 	char ch;
 	bool inword = false;
@@ -119,9 +113,7 @@ WORD GetNextWord(int choice){
 
 
 int DICT::LocateWord(WORD w) {
-/*
-   will determine if dictionary contains word. If found, returns location or -1 if not found
-*/
+
 	int found = 0;
 	int loc = -1;
 	for(int i = 0; i < this->d.size(); i++){	//Go through each element of dict
