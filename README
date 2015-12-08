@@ -7,3 +7,4 @@ To compile, type:	make
 To run type:            ./DICTIONARY
 To input a file type:   ./DICTIONARY < test
 where test is the file with your input
+error in git hub, Working Directory clean, so I used a tar file with URL in Readme
