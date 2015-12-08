@@ -37,13 +37,11 @@ public :
    int LocateWord(WORD w); //itr, nope!
 
 
-   //insert() will insert the word WORD in the dictionary if it's not already there; otherwise, it
-   //will increase its frequency by 1 ( this is what operator+() does below)
+  low)
    void insert(WORD w);
 
 
-   //this overloaded addition operator will insert the word w into the dictionary if it's not already there; 
-   //otherwise, it will increase its frequency by 1
+   
    DICT operator+(WORD w);
 
    //dump() will dump the first i words in dictionary to ostream o or all words if i = -1
@@ -59,11 +57,7 @@ public :
 ostream &operator<<(ostream &, DICT &);
 
 
-/*
-  this GetNextWord() will return the next word in the input stream, but with a slight twist
-  if the parameter == 0 then a word is a sequence of upper and lower case letters ( 'A'..'Z', 'a'..'z')
-  parameter != 0 then a word is a sequence of everthing BUT upper and lower case letters.
-*/
+
 WORD GetNextWord(int = 0);
 
 
