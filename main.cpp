@@ -1,14 +1,13 @@
 #include "dictionary.h"
 
 DICT dictionary(MAX);  //your dictionary 
-WORD word;        //Temp word to take from file
+WORD word;       
 
 int main (void) {
     int pos;
 
     while (1) {
-	/*1 == anything but letters, 0 or nothing is letters*/
-        //word = GetNextWord(1);
+	
 	word = GetNextWord(0);
         if ( word.empty() )  {
             cout << "dumping whole dictionary..." << endl;
